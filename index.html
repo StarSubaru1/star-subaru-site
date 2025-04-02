@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Subaru Delivers</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Section 1: Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
+            <div class="line-one"><span class="white">Star Subaru</span></div>
+            <div class="line-two"><span class="yellow italic">Delivers</span></div>
+          </h1>
+      </div>
+      <img src="images/delivery_truck.png" alt="Happy customer in new Subaru" class="hero-img" />
+    </section>
+
+    <!-- Section 2: 2x2 Grid of Cards + CTAs -->
+    <section class="card-grid-section">
+      <div class="card-grid">
+        <div class="card img-card order-1"><img src="images/old_lady.png" alt="Image 1"></div>
+        <div class="card text-card order-2"> <h2>Don’t let <strong>dealer tricks</strong> like <strong>hidden fees</strong> or <strong>negotiations</strong> keep you from <em>your new Subaru!</em></h2></div>
+        <div class="card text-card order-3 mobile-last"><h2> Buy with Star Subaru instead: <strong>Upfront pricing</strong>, <strong>zero surprises</strong>, and your new Subaru <strong>delivered</strong> <em>straight to your door!</em></h2></div>
+        <div class="card img-card order-4"><img src="images/home_buyer.png" alt="Image 2"></div>
+      </div>
+      <div class="cta-buttons">
+        <a href="https://express.starsubaru.com" class="btn gray" target="_blank" rel="noopener noreferrer">BOOK VIRTUAL CONSULTATION</a>
+        <a href="https://express.starsubaru.com" class="btn yellow" target="_blank" rel="noopener noreferrer">SHOP NOW</a>
+        <a href="https://www.starsubaru.com" class="btn gray" target="_blank" rel="noopener noreferrer">VISIT STARSUBARU.COM</a>
+
+      </div>
+    </section>
+
+    <!-- Section 3: Video placeholder -->
+    <section class="how-it-works">
+      <h2>How it works</h2>
+      <div class="video-placeholder">[Video Coming Soon]</div>
+    </section>
+
+    <!-- Section 4: General Manager Message -->
+    <section class="gm-message">
+      <div class="gm-grid">
+        <div class="card gm-image"><img src="images/general_manager.png" alt="Zack, General Manager"></div>
+        <div class="card gm-text">
+          <h2>Message the General Manager</h2>
+          <p>Zack loves helping people buy Subaru cars and SUVs, but he hates it when customers overpay at other dealers because of the games they play. He developed the Star Subaru <strong>Buyer’s Bill of Rights</strong> to make buying a Subaru easy, transparent, and the best deal in the greater-NYC area.</p>
+          <a href="mailto:zlintz@starsubaru.com" class="btn blue" target="_blank" rel="noopener noreferrer">MESSAGE ZACK</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Staff Cards -->
+    <section class="staff-section">
+        <h2 style="text-align: center; margin-bottom: 0;">MEET OUR STAFF</h2>
+        <h3 style="text-align: center; margin-top: 0;">AND BOOK A VIRTUAL CONSULTATION</h3>
+        <div id="staff-container" class="staff-container"></div>
+      </section>
+
+    <!-- Section 6: In-Person Visit -->
+    <section class="visit-section">
+      <h2>OR VISIT US IN PERSON</h2>
+      <div class="visit-grid">
+        <div class="card visit-wide">
+          <img src="images/star_dealer.png" alt="Subaru showroom">
+        </div>
+        <div class="card visit-narrow">
+          <img src="images/star_map.png" alt="Special offers">
+        </div>
+      </div>
+      <h3><p>20 minutes from Manhattan, 15 minutes from JFK and 15 minutes from Westbury</p></h3>
+      <h3>Click for directions: <br><a href="https://www.google.com/maps/search/?api=1&query=Star+Subaru+206-26+Northern+Blvd,+Bayside,+NY+11361" target="_blank">206-26 Northern Blvd, Bayside, NY 11361</a></h3>
+    </section>
+
+    <!-- Section 7: Reviews + Contact Info -->
+    <section class="reviews-section">
+      <div class="review-grid">
+        <div class="card big-bold-text">
+          Over <strong>400+</strong> Five-Star Reviews
+        </div>
+        <div class="card contact-card">
+          <p><strong>VISIT</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Star+Subaru+206-26+Northern+Blvd,+Bayside,+NY+11361" target="_blank">206-26 Northern Blvd, Bayside, NY 11361</a></p>
+          <p><strong>INQUIRE</strong><br><a href="mailto:info@starsubaru.com">info@starsubaru.com</a></p>
+          <p><strong>CALL</strong><br><a href="tel:+17188190100">(718)819-0100</a></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Script to load staff cards -->
+  <script>
+    fetch('staff.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('staff-container');
+        data.forEach(member => {
+          const card = document.createElement('div');
+          card.className = 'staff-card';
+          card.innerHTML = `
+            <img src="${member.image}" alt="${member.name}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;" />
+             <h3>${member.name}</h3>
+             <p>${member.languages.join(', ')}</p>
+             <a class="btn-primary" href="#">Book Now</a>
+            `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Mario Aetonu",
+    "image": "images/staff/mario.png",
+    "languages": ["English", "Korean", "Spanish"],
+    "email": "maetonu@starsubaru.com"
+  },
+  {
+    "name": "Jackson Yuen",
+    "image": "images/staff/jackson.png",
+    "languages": ["English", "Chinese"],
+    "email": "jackson@starsubaru.com"
+  },
+  {
+    "name": "Kate Macedonio",
+    "image": "images/staff/kate.png",
+    "languages": ["English"],
+    "email": "kmacedonio@starsubaru.com"
+  },
+  {
+    "name": "Steve Sze",
+    "image": "images/staff/steve.png",
+    "languages": ["English", "Chinese"],
+    "email": "steve@starsubaru.com"
+  },
+  {
+    "name": "Yonghao Chen",
+    "image": "images/staff/yonghao.png",
+    "languages": ["English", "Chinese"],
+    "email": "ychen@starsubaru.com"
+  },
+  {
+    "name": "Demetrios Gounaris",
+    "image": "images/staff/generic.png",
+    "languages": ["English", "Greek"],
+    "email": "demetrios@starsubaru.com"
+  }
+]
