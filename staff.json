@@ -3,36 +3,42 @@
     "name": "Mario Aetonu",
     "image": "images/staff/mario.png",
     "languages": ["English", "Korean", "Spanish"],
-    "email": "maetonu@starsubaru.com"
+    "email": "maetonu@starsubaru.com",
+    "daysOff": "Tuesday"
   },
   {
     "name": "Jackson Yuen",
     "image": "images/staff/jackson.png",
     "languages": ["English", "Chinese"],
-    "email": "jackson@starsubaru.com"
+    "email": "jackson@starsubaru.com",
+    "daysOff": "Tuesday"
   },
   {
     "name": "Kate Macedonio",
     "image": "images/staff/kate.png",
     "languages": ["English"],
-    "email": "kmacedonio@starsubaru.com"
+    "email": "kmacedonio@starsubaru.com",
+    "daysOff": "Tuesday"
   },
   {
     "name": "Steve Sze",
     "image": "images/staff/steve.png",
     "languages": ["English", "Chinese"],
-    "email": "steve@starsubaru.com"
+    "email": "steve@starsubaru.com",
+    "daysOff": "Tuesday"
   },
   {
     "name": "Yonghao Chen",
     "image": "images/staff/yonghao.png",
     "languages": ["English", "Chinese"],
-    "email": "ychen@starsubaru.com"
+    "email": "ychen@starsubaru.com",
+    "daysOff": "Tuesday"
   },
   {
     "name": "Demetrios Gounaris",
     "image": "images/staff/generic.png",
     "languages": ["English", "Greek"],
-    "email": "demetrios@starsubaru.com"
+    "email": "demetrios@starsubaru.com",
+    "daysOff": "Tuesday"
   }
 ]

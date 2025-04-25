@@ -434,3 +434,33 @@ h1, h2, h3 {
     height: 48px;
     flex: 1;
   }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
