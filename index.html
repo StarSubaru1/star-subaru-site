@@ -107,7 +107,7 @@
              <h3>${member.name}</h3>
              <p>${member.languages.join(', ')}</p>
               <p><strong>Days Off:</strong> ${member.daysOff}</p>
-             <a class="btn-primary book-now" href="#" data-name="${member.name}">Book Now</a>
+             <a class="btn-primary" href="#" data-name="${member.name}">Book Now</a>
             `;
           container.appendChild(card);
         });
@@ -143,7 +143,7 @@
                 <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Star Subaru! Your appointment request was sent to the dealership, and we’ll be in touch shortly to confirm. If you need anything in the meantime, visit us at https://www.starsubaru.com, call (718)819-0100 or stop by 206-26 Northern Blvd, Bayside, NY 11361. It’s great to meet you – we look forward to helping you get into a new Subaru or quality preowned car!" />
   
                 <label>Your Name</label><br/>
-                <input type="text" name="name" required autofocus><br/><br/>
+                <input type="text" name="name" required><br/><br/>
   
                 <label>Your Email</label><br/>
                 <input type="email" name="email" required><br/><br/>
@@ -163,4 +163,23 @@
     </div>
 
 </body>
+<section class="appointment-form" id="appointment-form" style="display: none;">
+    <h2 style="text-align: center;">REQUEST AN APPOINTMENT</h2>
+    <form action="https://formsubmit.co/youremail@domain.com" method="POST" style="max-width: 600px; margin: 0 auto;">
+      <input type="hidden" name="_subject" id="form-subject" value="Appointment Request" />
+      <input type="hidden" name="employee" id="form-employee" />
+      <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Star Subaru! Your appointment request was sent to the dealership, and we’ll be in touch shortly to confirm. If you need anything in the meantime, visit us at https://www.starsubaru.com, call us at (718)819-0100 or stop by 206-26 Northern Blvd, Bayside, NY 11361. It’s great to meet you – we look forward to helping you get into a new Subaru or a quality preowned car!" />
+  
+      <label for="name">Your Name</label><br/>
+      <input type="text" name="name" required><br/><br/>
+  
+      <label for="email">Your Email</label><br/>
+      <input type="email" name="email" required><br/><br/>
+  
+      <label for="datetime">Preferred Date/Time</label><br/>
+      <input type="datetime-local" name="datetime"><br/><br/>
+  
+      <button type="submit" class="btn blue">Submit Request</button>
+    </form>
+  </section>
 </html>
