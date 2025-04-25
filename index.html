@@ -30,7 +30,7 @@
         <div class="card img-card order-4"><img src="images/home_buyer.png" alt="Image 2"></div>
       </div>
       <div class="cta-buttons">
-        <a class="btn gray general-inquiry" href="#">BOOK VIRTUAL CONSULTATION</a>
+        <a class="btn gray general-inquiry" href="javascript:void(0)">BOOK VIRTUAL CONSULTATION</a>
         <a href="https://express.starsubaru.com" class="btn yellow" target="_blank" rel="noopener noreferrer">SHOP NOW</a>
         <a href="https://www.starsubaru.com" class="btn gray" target="_blank" rel="noopener noreferrer">VISIT STARSUBARU.COM</a>
 
@@ -93,6 +93,35 @@
 
   </div>
 
+  <div id="appointment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 style="text-align: center;">REQUEST AN APPOINTMENT</h2>
+          <form action="https://formsubmit.co/zlintz@starsubaru.com" method="POST">
+            <input type="hidden" name="_subject" id="form-subject" />
+            <input type="hidden" name="employee" id="form-employee" />
+            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Star Subaru! Your appointment request was sent to the dealership, and we’ll be in touch shortly to confirm. If you need anything in the meantime, visit us at https://www.starsubaru.com, call (718)819-0100 or stop by 206-26 Northern Blvd, Bayside, NY 11361. It’s great to meet you – we look forward to helping you get into a new Subaru or quality preowned car!" />
+
+            <label>Your Name</label><br/>
+            <input type="text" name="name" required autofocus><br/><br/>
+
+            <label>Your Email</label><br/>
+            <input type="email" name="email" required><br/><br/>
+
+            <label>Phone Number (optional)</label><br/>
+            <input type="tel" name="phone"><br/><br/>
+
+            <label>ZIP Code (optional)</label><br/>
+            <input type="text" name="zip"><br/><br/>
+
+            <label>Preferred Date/Time</label><br/>
+            <input type="datetime-local" name="datetime"><br/><br/>
+
+            <button type="submit" class="btn blue">Submit Request</button>
+          </form>
+      </div>
+   </div>
+
   <!-- Script to load staff cards -->
   <script>
     fetch('staff.json')
@@ -107,7 +136,7 @@
             <h3>${member.name}</h3>
             <p>${member.languages.join(', ')}</p>
             <p><strong>Day Off:</strong> ${member.daysOff}</p>
-            <a class="btn-primary book-now" href="#" data-name="${member.name}">Book Now</a>
+            <a class="btn-primary book-now" href="javascript:void(0)" data-name="${member.name}">Book Now</a>
           `;
           container.appendChild(card);
         });
@@ -161,35 +190,6 @@
         });
       });
   </script>
-
-    <div id="appointment-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2 style="text-align: center;">REQUEST AN APPOINTMENT</h2>
-            <form action="https://formsubmit.co/zlintz@starsubaru.com" method="POST">
-                <input type="hidden" name="_subject" id="form-subject" />
-                <input type="hidden" name="employee" id="form-employee" />
-                <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Star Subaru! Your appointment request was sent to the dealership, and we’ll be in touch shortly to confirm. If you need anything in the meantime, visit us at https://www.starsubaru.com, call (718)819-0100 or stop by 206-26 Northern Blvd, Bayside, NY 11361. It’s great to meet you – we look forward to helping you get into a new Subaru or quality preowned car!" />
-  
-                <label>Your Name</label><br/>
-                <input type="text" name="name" required autofocus><br/><br/>
-  
-                <label>Your Email</label><br/>
-                <input type="email" name="email" required><br/><br/>
-
-                <label>Phone Number (optional)</label><br/>
-                <input type="tel" name="phone"><br/><br/>
-
-                <label>ZIP Code (optional)</label><br/>
-                <input type="text" name="zip"><br/><br/>
-  
-                <label>Preferred Date/Time</label><br/>
-                <input type="datetime-local" name="datetime"><br/><br/>
-  
-                <button type="submit" class="btn blue">Submit Request</button>
-            </form>
-        </div>
-    </div>
 
 </body>
 </html>
