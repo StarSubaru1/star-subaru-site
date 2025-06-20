@@ -111,34 +111,9 @@
             <h3>${member.name}</h3>
             <p>${member.languages.join(', ')}</p>
             <p><strong>Day Off:</strong> ${member.daysOff}</p>
-            <a class="btn-primary book-now" href="javascript:void(0)" data-name="${member.name}">Book Now</a>
+            <a class="btn-primary" href="https://outlook.office.com/book/StarSubaruDirectVirtualConsultation@starautomotivegroup.onmicrosoft.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">Book Now</a>
           `;
           container.appendChild(card);
-        });
-  
-        document.querySelectorAll(".book-now").forEach(button => {
-          button.addEventListener("click", (e) => {
-            e.preventDefault();
-            const staffName = button.getAttribute("data-name");
-  
-            document.getElementById("form-employee").value = staffName;
-            document.getElementById("form-subject").value = `Appointment request for ${staffName}`;
-  
-            const modal = document.getElementById("appointment-modal");
-            modal.style.display = "flex";
-  
-            const closeBtn = document.querySelector(".close-button");
-  
-            closeBtn.addEventListener("click", () => {
-              modal.style.display = "none";
-            });
-  
-            window.addEventListener("click", (e) => {
-              if (e.target === modal) {
-                modal.style.display = "none";
-              }
-            });
-          });
         });
       });
   </script>
