@@ -32,7 +32,7 @@
         <div class="card img-card order-4"><img src="images/home_buyer.png" alt="Image 2"></div>
       </div>
       <div class="cta-buttons">
-        <a class="btn gray general-inquiry" href="javascript:void(0)">BOOK VIRTUAL CONSULTATION</a>
+        <a class="btn gray" href="https://outlook.office.com/book/StarSubaruDirectVirtualConsultation@starautomotivegroup.onmicrosoft.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">BOOK VIRTUAL CONSULTATION</a>
         <a href="https://express.starsubaru.com" class="btn yellow" target="_blank" rel="noopener noreferrer">SHOP NOW</a>
         <a href="https://www.starsubaru.com" class="btn gray" target="_blank" rel="noopener noreferrer">VISIT STARSUBARU.COM</a>
 
@@ -97,35 +97,6 @@
 
   </div>
 
-  <div id="appointment-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2 style="text-align: center;">REQUEST AN APPOINTMENT</h2>
-          <form action="https://formsubmit.co/info@starsubaru.com" method="POST">
-            <input type="hidden" name="_subject" id="form-subject" />
-            <input type="hidden" name="employee" id="form-employee" />
-            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Star Subaru! Your appointment request was sent to the dealership, and we’ll be in touch shortly to confirm. If you need anything in the meantime, visit us at https://www.starsubaru.com, call (718)819-0100 or stop by 206-26 Northern Blvd, Bayside, NY 11361. It’s great to meet you – we look forward to helping you get into a new Subaru or quality preowned car!" />
-
-            <label>Your Name</label><br/>
-            <input type="text" name="name" required autofocus><br/><br/>
-
-            <label>Your Email</label><br/>
-            <input type="email" name="email" required><br/><br/>
-
-            <label>Phone Number (optional)</label><br/>
-            <input type="tel" name="phone"><br/><br/>
-
-            <label>ZIP Code (optional)</label><br/>
-            <input type="text" name="zip"><br/><br/>
-
-            <label>Preferred Date/Time</label><br/>
-            <input type="datetime-local" name="datetime"><br/><br/>
-
-            <button type="submit" class="btn blue">Submit Request</button>
-          </form>
-      </div>
-   </div>
-
   <!-- Script to load staff cards -->
   <script>
     fetch('staff.json')
@@ -165,29 +136,6 @@
             window.addEventListener("click", (e) => {
               if (e.target === modal) {
                 modal.style.display = "none";
-              }
-            });
-          });
-        });
-
-        document.querySelectorAll(".general-inquiry").forEach(button => {
-          button.addEventListener("click", (e) => {
-            e.preventDefault();
-            document.getElementById("form-employee").value = "General Inquiry";
-            document.getElementById("form-subject").value = "Appointment request – General Inquiry";
-
-            const modal = document.getElementById("appointment-modal");
-            modal.style.display = "flex";
-
-            const closeBtn = document.querySelector(".close-button");
-
-            closeBtn.addEventListener("click", () => {
-              modal.style.display = "none";
-            });
-
-            window.addEventListener("click", (e) => {
-              if (e.target === modal) {
-               modal.style.display = "none";
               }
             });
           });
