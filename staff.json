@@ -40,12 +40,12 @@
     "languages": ["English", "Greek"],
     "email": "demetrios@starsubaru.com",
     "daysOff": "Tuesday, Thursday, Sunday"
-  }
+  },
     {
     "name": "Taesharra Hopkins",
     "image": "images/staff/taesharra.png",
     "languages": ["English"],
     "email": "thopkins@starsubaru.com",
     "daysOff": "Tuesday"
-  }
+  },
 ]
